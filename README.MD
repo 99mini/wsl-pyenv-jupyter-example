@@ -1,3 +1,44 @@
+# wsl 설치
+
+### Windows PowerShell (관리자)
+
+```bash
+wsl --install
+```
+
+기본 배포판: Ubuntu 22.04 LTS 권장
+
+설치 후 재부팅 → Ubuntu 실행 → 사용자 계정 생성
+
+# WSL 기본 패키지 업데이트
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+### 필수 빌드 패키지 설치 (pyenv 필수)
+
+```bash
+sudo apt install -y \
+  build-essential \
+  curl \
+  git \
+  libssl-dev \
+  zlib1g-dev \
+  libbz2-dev \
+  libreadline-dev \
+  libsqlite3-dev \
+  llvm \
+  libncursesw5-dev \
+  xz-utils \
+  tk-dev \
+  libxml2-dev \
+  libxmlsec1-dev \
+  libffi-dev \
+  liblzma-dev
+```
+
+
 # pyenv 설치
 ```bash
 curl https://pyenv.run | bash
