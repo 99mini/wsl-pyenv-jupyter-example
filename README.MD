@@ -1,5 +1,41 @@
+# pyenv 설치
 ```bash
+curl https://pyenv.run | bash
+```
+
+```bash
+vim ~/.bashrc
+```
+
+```bash
+# vim ~/.bashrc
+# 아래 내용을 .bashrc 맨 아래에 추가
+# i를 누를 후 복사 붙여넣기
+# esc -> :wq 엔터
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
+
+```bash
+source ~/.bashrc
+```
+
+# Python 3.8 ~ 3.11 설치
+```bash
+pyenv install 3.8.18
 pyenv install 3.9.18
+pyenv install 3.10.13
+pyenv install 3.11.7
+```
+
+```bash
+pyenv versions
 ```
 
 # setting
